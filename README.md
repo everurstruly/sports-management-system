@@ -1,4 +1,4 @@
-# Membership Content Platform
+# Creator Membership Platform
 
 A **single-vendor subscription platform** for publishing gated blog posts and videos. Users can subscribe to unlock premium content, while non-members see teasers and calls-to-action. Its built around a specific business owner, community or personality.
 

@@ -1,64 +1,70 @@
-# Membership Content Platform
+# Sports Management Platform
 
-A **single-vendor subscription platform** for publishing gated blog posts and videos. Users can subscribe to unlock premium content, while non-members see teasers and calls-to-action. Its built around a specific business owner, community or personality.
+A modern, mobile-first platform for managing sports teams and tournaments. Built primarily to serve coaches, players, parents, but accomodates tournament organizers with real-time communication and streamlined team management.
 
-This project is built as a **portfolio showcase** and a **reusable template** for subscription-based websites (e.g. coaches, chefs, tutors, creators).
+## 👥 Screenshots
+_coming soon_
 
----
+## 🎯 Problem Statement
 
-## 🚀 Features
-- Auth — secure signup/login, role-based access (admin, subscriber, guest)
-- Subscriptions & Payments — Stripe-powered recurring subscriptions, premium membership tier, start/cancel management
-- Creator Dashboard — admin dashboard for posts & videos, public teasers, gated content for subscribers
-- Content Management — video uploads & playback, Markdown blog posts
-- User Portal — view subscription status, access gated content if subscribed
-- SEO Optimization — basic meta tags, Open Graph, social sharing, search ranking improvements
+Local sports teams and eSports organizations in Africa struggle with:
+- **Fragmented Communication**: WhatsApp groups, SMS, and email create chaos
+- **Manual Administration**: Coaches spend hours on roster management and scheduling
+- **Payment Hassles**: Collecting membership fees and tournament entries is painful
+- **Tournament Complexity**: Organizers lack simple tools for bracket management
+- **Limited Mobile Solutions**: Existing platforms aren't built mobile-first for African users
 
----
+## 🚀 Solution (Features)
 
-<!-- ## 🛠️ Tech Stack
+A unified platform that connects **Teams** and **Tournament Organizers** through:
 
-* **Frontend:** Next.js (App Router) + TailwindCSS
-* **Backend:** Next.js API routes (Node.js)
-* **Database:** PostgreSQL (Prisma ORM)
-* **Auth:** NextAuth.js (JWT sessions)
-* **Payments:** Stripe Subscriptions
-* **Storage:** AWS S3 (or Supabase/Cloudinary) for media files
+### For Teams (Coaches, Players, Parents)
+- **Roster Management**: Easy player registration and contact management
+- **Real-time Chat**: Team communication without WhatsApp chaos
+- **Attendance Tracking**: Mark presence for practices and games
+- **Payment Processing**: Seamless membership fee collection with mobile money integration
+- **Tournament Registration**: Simple sign-up for competitions
 
---- -->
+### For Tournament Organizers
+- **Event Creation**: Set up tournaments with custom rules and brackets
+- **Team Management**: Handle registrations and communication with multiple teams
+- **Live Updates**: Real-time bracket updates and score tracking
+- **Payment Collection**: Automated entry fee processing
+- **Communication Hub**: Broadcast announcements to all participants
 
-## 🗺️ Roadmap
+## 🌍 Target Market
 
-### Planning
+**Primary**: Local youth sports leagues and eSports communities across Africa
+- ReguibsL Nigeria, South Africa, Kenya, Ghana and India
+- SoirtsL Football (Soccer), Tennis, Cricket, Basketball, and mobile eSports tournaments
 
-* [ ] Sitemap & database schema
-* [ ] UI/UX design (landing, dashboard, content pages)
-* [ ] Authentication setup (NextAuth.js)
-* [ ] Stripe payments & subscriptions
-* [ ] File storage setup (AWS S3 / Supabase / Cloudinary)
+## 📋 Roadmap
 
-### MVP
+### Phase 1: MVP (Current)
+- [x] Basic team and tournament management
+- [x] User authentication and roles
+- [x] Real-time chat functionality
+- [x] Payment processing integration
+- [x] Mobile-responsive UI
 
-* [ ] Public landing page with teaser content
-* [ ] User signup/login
-* [ ] Subscribe & pay (Stripe test mode)
-* [ ] Admin dashboard to publish blog posts & videos
-* [ ] Gated content (subscribers vs non-subscribers)
-* [ ] Subscriber dashboard (view subscription status + content access)
-* [ ] Unit & integration tests
+### Phase 2: Enhanced Features
+- [ ] Advanced tournament bracket types
+- [ ] Statistics and performance tracking  
+- [ ] Push notifications
+- [ ] Mobile app (React Native)
+- [ ] Multi-language support
 
-### V2
+### Phase 3: Platform Expansion
+- [ ] Fan engagement features
+- [ ] Live streaming integration
+- [ ] Advanced analytics dashboard
+- [ ] API for third-party integrations
+- [ ] White-label solutions
 
-* [ ] Multiple membership tiers (Basic / Pro / Premium)
-* [ ] Email notifications for new content
-* [ ] Content categories & tags
-* [ ] SEO optimization for posts/videos
-* [ ] Analytics dashboard (subscribers, revenue, content views)
-* [ ] Commenting system for members
+## 🤝 Contributing
 
+Feedback and suggestions are welcome! Limited to issues submissions
 
----
+## 📄 License
 
-## 📸 Screenshots
-
-*(Coming soon — add landing page, dashboard, gated content views once built)*
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

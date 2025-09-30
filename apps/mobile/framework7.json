@@ -1,0 +1,19 @@
+{
+  "cwd": "C:\\Users\\oGHENETEFA\\Documents\\Workspace-Resume\\sports-management-system\\apps",
+  "type": [
+    "pwa",
+    "web"
+  ],
+  "name": "team",
+  "framework": "react",
+  "template": "tabs",
+  "bundler": "vite",
+  "cssPreProcessor": false,
+  "theming": {
+    "customColor": true,
+    "color": "#d35d0a",
+    "darkMode": false,
+    "iconFonts": true
+  },
+  "customBuild": false
+}

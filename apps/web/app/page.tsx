@@ -1,12 +1,18 @@
-import { Button } from "@workspace/ui/components/button"
+import { Navbar03 } from "@/components/navbar";
+import FAQ02 from "@/components/faq/faq-02";
+import FeaturesSection from "@/components/features-5";
+import Hero from "@/components/hero";
+import StatsSection from "@/components/stats";
 
-export default function Page() {
+export default function Home() {
   return (
-    <div className="flex items-center justify-center min-h-svh">
-      <div className="flex flex-col items-center justify-center gap-4">
-        <h1 className="text-2xl font-bold">Hello World</h1>
-        <Button size="sm">Button</Button>
-      </div>
-    </div>
-  )
+    <>
+      <Navbar03 />
+      <main>
+        <Hero />
+        <FeaturesSection />
+        <FAQ02 />
+      </main>
+    </>
+  );
 }

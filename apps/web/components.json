@@ -6,15 +6,26 @@
   "tailwind": {
     "config": "",
     "css": "../../packages/ui/src/styles/globals.css",
-    "baseColor": "neutral",
+    "baseColor": "zinc",
     "cssVariables": true
   },
   "iconLibrary": "lucide",
   "aliases": {
     "components": "@/components",
-    "hooks": "@/hooks",
-    "lib": "@/lib",
     "utils": "@workspace/ui/lib/utils",
-    "ui": "@workspace/ui/components"
+    "ui": "@workspace/ui/components",
+    "lib": "@/lib",
+    "hooks": "@/hooks"
+  },
+  "registries": {
+    "@shadcnblocks": {
+      "url": "https://shadcnblocks.com/r/{name}",
+      "headers": {
+        "Authorization": "Bearer ${SHADCNBLOCKS_API_KEY}"
+      }
+    },
+    "@aceternity": "https://ui.aceternity.com/registry/{name}.json",
+    "@tailark": "https://tailark.com/r/{name}.json",
+    "@magicui": "https://magicui.design/r/{name}.json"
   }
 }

@@ -5,15 +5,11 @@ import Link from "next/link";
 
 const links = [
   {
+    title: "About",
+    href: "#",
+  },
+  {
     title: "Features",
-    href: "#",
-  },
-  {
-    title: "Solution",
-    href: "#",
-  },
-  {
-    title: "Customers",
     href: "#",
   },
   {
@@ -21,19 +17,19 @@ const links = [
     href: "#",
   },
   {
-    title: "Help",
+    title: "Customers",
     href: "#",
   },
   {
-    title: "About",
+    title: "Contact",
     href: "#",
   },
 ];
 
-export default function FooterSection() {
+export default function PageFooter() {
   return (
     <footer className="px-6 py-16 md:py-32">
-      <div className="flex flex-col max-w-5xl mx-auto gap-y-8 xl:gap-y-6">
+      <div className="flex flex-col max-w-5xl mx-auto gap-y-12 xl:gap-y-6">
         <section className="flex flex-wrap-reverse justify-between gap-x-20 gap-y-8">
           <Link
             href="/"
@@ -99,13 +95,13 @@ export default function FooterSection() {
           </div>
         </section>
 
-        <section className="flex flex-wrap-reverse justify-center md:justify-between gap-x-20 gap-y-6">
+        <section className="flex flex-wrap-reverse justify-center md:justify-between gap-x-20 gap-y-12 xl:gap-y-6">
           <span className="block text-sm text-center text-muted-foreground">
             {" "}
-            © {new Date().getFullYear()} Tailark, All rights reserved
+            © {new Date().getFullYear()} everurstruly, All rights reserved
           </span>
 
-          <div className="flex flex-wrap justify-center gap-6 text-sm">
+          <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm">
             {links.map((link, index) => (
               <Link
                 key={index}

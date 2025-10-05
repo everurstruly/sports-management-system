@@ -14,7 +14,7 @@ export default function WaitlistSection() {
   return (
     <PageSection className="flex items-center justify-center h-full overflow-hidden">
       <BackgroundLines className="container flex flex-col items-center justify-center w-full px-4 md:h-full">
-        <h1 className="text-4xl min-[290px]:text-5xl sm:text-[68px] md:text-7xl mb-4 font-extrabold uppercase lg:text-8xl font-impact text-zinc-900 dark:text-zinc-100">
+        <h1 className="text-4xl min-[290px]:text-5xl sm:text-[68px] md:text-7xl mb-4 font-extrabold uppercase lg:text-8xl font-impact text-zinc-900 dark:text-zinc-100 text-center">
           Join the Waitlist
         </h1>
 

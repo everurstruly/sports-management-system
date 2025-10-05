@@ -41,9 +41,9 @@
   --sidebar-accent-foreground: oklch(1 0 0);
   --sidebar-border: oklch(0 0 0);
   --sidebar-ring: oklch(0.6489 0.237 26.9728);
-  --font-sans: DM Sans, sans-serif;
+  /* --font-sans: DM Sans, sans-serif; */
   --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-  --font-mono: Space Mono, monospace;
+  /* --font-mono: Space Mono, monospace; */
   --shadow-color: hsl(0 0% 0%);
   --shadow-opacity: 1;
   --shadow-blur: 0px;
@@ -69,7 +69,7 @@
 
 .dark {
   --background: oklch(0.269 0 0);
-  --foreground: oklch(0.9700 0 0);
+  --foreground: oklch(0.97 0 0);
   --card: oklch(0.3211 0 0);
   --card-foreground: oklch(1 0 0);
   --popover: oklch(0.3211 0 0);
@@ -85,7 +85,7 @@
   --destructive: oklch(0 0 0);
   --destructive-foreground: oklch(1 0 0);
   --border: oklch(1 0 0);
-  --input: oklch(.4 0 0);
+  --input: oklch(0.4 0 0);
   --ring: oklch(0.7044 0.1872 23.1858);
   --chart-1: oklch(0.7044 0.1872 23.1858);
   --chart-2: oklch(0.9691 0.2005 109.6228);
@@ -101,9 +101,9 @@
   --sidebar-border: oklch(1 0 0);
   --sidebar-ring: oklch(0.7044 0.1872 23.1858);
   --radius: 0px;
-  --font-sans: DM Sans, sans-serif;
+  /* --font-sans: DM Sans, sans-serif; */
   --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-  --font-mono: Space Mono, monospace;
+  /* --font-mono: Space Mono, monospace; */
   --shadow-color: hsl(0 0% 0%);
   --shadow-opacity: 1;
   --shadow-blur: 0px;
@@ -163,8 +163,8 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
-  --font-sans: DM Sans, sans-serif;
-  --font-mono: Space Mono, monospace;
+  /* --font-sans: DM Sans, sans-serif; */
+  /* --font-mono: Space Mono, monospace; */
   --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
   --radius: 0px;
   --tracking-tighter: calc(var(--tracking-normal) - 0.05em);
@@ -206,7 +206,8 @@
   font-family: var(--font-impact);
 }
 
-::view-transition-old(root), ::view-transition-new(root) {
-    animation: none;
-    mix-blend-mode: normal;
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
 }

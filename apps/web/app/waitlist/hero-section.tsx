@@ -8,24 +8,22 @@ import {
 import { Button } from "@workspace/ui/components/button";
 import { Input } from "@workspace/ui/components/input";
 import PageSection from "@/components/page-section";
-import SectionSubheading from "@/components/section-subheading";
+import PageHeading from "@/components/page-heading";
+import PageSubheading from "@/components/page-subheading";
 
 export default function WaitlistSection() {
   return (
-    <PageSection className="flex items-center justify-center h-full overflow-hidden">
+    <PageSection className="flex items-center justify-center h-full overflow-hidden py-18 lg:pb-20">
       <BackgroundLines className="container flex flex-col items-center justify-center w-full px-4 md:h-full">
-        <h1 className="text-4xl min-[290px]:text-5xl sm:text-[68px] md:text-7xl mb-4 font-extrabold uppercase lg:text-8xl font-impact text-zinc-900 dark:text-zinc-100 text-center">
-          Join the Waitlist
-        </h1>
+        <PageHeading>Join the Waitlist</PageHeading>
 
-        <SectionSubheading className="mx-auto text-center">
+        <PageSubheading className="mx-auto text-center">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </SectionSubheading>
+        </PageSubheading>
 
         <div className="relative z-20 flex items-center w-full max-w-md gap-3 p-1 mt-10">
           <Input type="email" placeholder="Enter your email" />
-
           <Button variant="default">Join now</Button>
         </div>
 

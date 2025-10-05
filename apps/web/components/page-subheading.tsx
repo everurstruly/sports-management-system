@@ -1,17 +1,17 @@
 import { TextAnimate } from "@workspace/ui/components/text-animate";
 
-type SectionSubheadingProps = {
+type PageSubheadingProps = {
   children: string;
   className?: string;
 };
 
-export default function SectionSubheading({
+export default function PageSubheading({
   children,
   className,
-}: SectionSubheadingProps) {
+}: PageSubheadingProps) {
   return (
     <TextAnimate
-      animation="slideLeft"
+      animation="slideUp"
       by="line"
       as="h4"
       className={`max-w-md font-medium text-sm xl:text-base text-zinc-600 dark:text-zinc-400 leading-tight ${className}`}

@@ -1,5 +1,5 @@
 import PageSection from "@/components/page-section";
-import PricingSection from "@/app/pricing/pricing-section";
+import PricingSection from "@/app/pricing/hero-section";
 
 export default function PricingPage() {
   return (

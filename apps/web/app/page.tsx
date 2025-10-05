@@ -1,18 +1,22 @@
-import { Navbar03 } from "@/components/navbar";
-import FAQ02 from "@/components/faq/faq-02";
-import FeaturesSection from "@/components/features-5";
-import Hero from "@/components/hero";
-import StatsSection from "@/components/stats";
+import { PageHeader } from "@/components/page-header";
+import FaqSection from "@/components/faq-section";
+import HeroSection from "@/app/.sections/hero-section";
+import FollowerSection from "@/app/.sections/follower-section";
+import TeamSection from "@/app/.sections/team-section";
+import TournamentSection from "@/app/.sections/tournament-section";
+import VenueSection from "@/app/.sections/venue-section";
+
+// Pocket Sized Sports Management Solution
 
 export default function Home() {
   return (
-    <>
-      <Navbar03 />
-      <main>
-        <Hero />
-        <FeaturesSection />
-        <FAQ02 />
-      </main>
-    </>
+    <main>
+      <HeroSection />
+      <TournamentSection />
+      <VenueSection />
+      <FollowerSection />
+      <TeamSection />
+      <FaqSection />
+    </main>
   );
 }

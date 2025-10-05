@@ -2,7 +2,7 @@ import "@workspace/ui/globals.css";
 import { Geist_Mono, Anton, Manjari } from "next/font/google";
 import { Providers } from "@/app/providers";
 import { Metadata } from "next";
-import PageFooter from "@/components/footer";
+import PageFooter from "@/components/page-footer";
 import { PageHeader } from "@/components/page-header";
 
 const fontImpact = Anton({

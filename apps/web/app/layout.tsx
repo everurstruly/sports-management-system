@@ -1,8 +1,9 @@
 import "@workspace/ui/globals.css";
-import { Geist, Geist_Mono, Anton } from "next/font/google";
+import { Geist_Mono, Anton, Manjari } from "next/font/google";
 import { Providers } from "@/app/providers";
 import { Metadata } from "next";
-import FooterSection from "@/components/footer";
+import PageFooter from "@/components/footer";
+import { PageHeader } from "@/components/page-header";
 
 const fontImpact = Anton({
   subsets: ["latin"],
@@ -10,8 +11,9 @@ const fontImpact = Anton({
   variable: "--font-impact",
 });
 
-const fontSans = Geist({
+const fontSans = Manjari({
   subsets: ["latin"],
+  weight: ["100", "400", "700"],
   variable: "--font-sans",
 });
 
@@ -20,19 +22,9 @@ const fontMono = Geist_Mono({
   variable: "--font-mono",
 });
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
 export const metadata: Metadata = {
-  title: "Rena - Software Management",
-  description: "Tournament, Club, Participant management for Rena",
+  title: "Renna - Software Management",
+  description: "Tournament, Society, Supporter management by Renna",
 };
 
 export default function RootLayout({
@@ -43,11 +35,12 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${fontImpact.variable} ${fontSans.variable} ${fontMono.variable} ${geistSans.variable} ${geistMono.variable} font-sans antialiased`}
+        className={`${fontImpact.variable} ${fontSans.variable} ${fontMono.variable} antialiased`}
       >
         <Providers>
+          <PageHeader />
           {children}
-          <FooterSection />
+          <PageFooter />
         </Providers>
       </body>
     </html>

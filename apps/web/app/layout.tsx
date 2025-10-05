@@ -23,7 +23,7 @@ const fontMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Renna - Software Management",
+  title: "Renna - Tournament Solution",
   description: "Tournament, Society, Supporter management by Renna",
 };
 

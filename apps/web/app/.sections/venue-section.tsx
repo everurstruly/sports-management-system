@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader } from "@workspace/ui/components/card";
-import { Settings2, Sparkles, Zap } from "lucide-react";
+import { AwardIcon, CalendarCheck, ScanEyeIcon } from "lucide-react";
 import { ReactNode } from "react";
 import PageSection from "../../components/page-section";
 import SectionHeading from "../../components/section-heading";
@@ -32,79 +32,78 @@ export default function VenueSection() {
   return (
     <PageSection>
       <header className="md:flex md:items-end md:justify-between md:gap-x-14 text-center md:text-start">
-        <SectionHeading className="shrink-0 md:max-w-[60%] md:mb-0 mx-auto md:mx-0">
+        <SectionHeading className="shrink-0 md:max-w-[40%] lg:grow-0 md:mb-0 mx-auto md:mx-0">
           Venue & Calendar Management.
         </SectionHeading>
-        <SectionSubheading className="w-fit max-w-[30ch] min-w-[20ch] mx-auto md:mx-0">
-          Libero sapiente aliquam quibusdam aspernatur, praesentium iusto
-          repellendus.
-        </SectionSubheading>
+
+        <div className="flex flex-col gap-y-6 lg:gap-y-4 lg:pb-2">
+          <SectionSubheading className="mx-auto md:mx-0 grow">
+            See your venue's full schedule and availability at a glance.
+          </SectionSubheading>
+
+          <Button
+            asChild
+            className="items-center gap-2 self-center lg:self-start"
+            aria-label="Open venue calendar"
+          >
+            <Link href="/waitlist">
+              <CalendarCheck className="h-4 w-4" />
+              Manage my Calendar!
+            </Link>
+          </Button>
+        </div>
       </header>
 
-      <div className="flex flex-wrap justify-evenly gap-6 lg:gap-x-16 [--color-background:var(--color-muted)] [--color-card:var(--color-muted)] *:text-center md:mt-16 mt-6 dark:[--color-muted:var(--color-zinc-900)]">
-        <Card className="max-w-[16rem] group border-0 shadow-none gap-y-2 dark:bg-transparent">
-          <CardHeader>
-            <CardDecorator>
-              <Zap className="size-6" aria-hidden />
-            </CardDecorator>
-
-            <h3 className="mt-4 font-medium">Customizable</h3>
-          </CardHeader>
-
-          <CardContent className="px-2">
-            <p className="text-xs text-foreground xl:text-sm">
-              Extensive customization options, allowing you to tailor every
-              aspect to meet your specific needs.
-            </p>
-          </CardContent>
-        </Card>
-
-        <Card className="max-w-[16rem] group border-0 shadow-none gap-y-2 dark:bg-transparent">
-          <CardHeader>
-            <CardDecorator>
-              <Settings2 className="size-6" aria-hidden />
-            </CardDecorator>
-
-            <h3 className="mt-4 font-medium">You have full control</h3>
-          </CardHeader>
-
-          <CardContent className="px-2">
-            <p className="text-xs text-foreground xl:text-sm">
-              From design elements to functionality, you have complete c.
-            </p>
-          </CardContent>
-        </Card>
-
-        <Card className="max-w-[16rem] group border-0 shadow-none gap-y-2 dark:bg-transparent">
-          <CardHeader>
-            <CardDecorator>
-              <Sparkles className="size-6" aria-hidden />
-            </CardDecorator>
-
-            <h3 className="mt-4 font-medium">Powered By AI</h3>
-          </CardHeader>
-
-          <CardContent className="px-2">
-            <p className="text-xs text-foreground xl:text-sm">
-              Elements to functionality, you have complete control to create a
-              unique experience.
-            </p>
-          </CardContent>
-        </Card>
+      <div className="flex flex-wrap lg:flex-nowrap justify-evenly gap-6 lg:gap-x-14 [--color-background:var(--color-muted)] [--color-card:var(--color-muted)] *:text-center mt-6 md:mt-10 dark:[--color-muted:var(--color-zinc-900)]">
+        <BenefitItem data={benefits[0]!} />
+        <BenefitItem data={benefits[1]!} />
+        <BenefitItem data={benefits[2]!} />
       </div>
     </PageSection>
   );
 }
 
+// CardDecorator: animate the grid/border color by crossfading two gradient overlays.
+// You can't animate `background-image` reliably, so we animate `opacity` of two
+// layers (base + hover) that use different CSS variables for the grid color.
 const CardDecorator = ({ children }: { children: ReactNode }) => (
-  <div className="mask-radial-from-40% mask-radial-to-60% relative mx-auto size-20 lg:size-36 duration-500 ease-linear [--color-border:color-mix(in_oklab,var(--color-zinc-950)10%,transparent)] group-hover:[--color-border:color-mix(in_oklab,var(--color-zinc-950)20%,transparent)] dark:[--color-border:color-mix(in_oklab,var(--color-white)15%,transparent)] dark:group-hover:[--color-border:color-mix(in_oklab,var(--color-white)20%,transparent)]">
+  <div className="mask-radial-from-40% mask-radial-to-60% relative mx-auto size-36 lg:size-36 [--color-border:color-mix(in_oklab,var(--color-primary)30%,transparent)] [--color-border-hover:color-mix(in_oklab,var(--color-primary)90%,transparent)] dark:[--color-border:color-mix(in_oklab,var(--color-white)15%,transparent)] dark:[--color-border-hover:color-mix(in_oklab,var(--color-white)20%,transparent)] group-hover:[--color-border-hover:color-mix(in_oklab,var(--color-primary)90%,transparent)] transition-colors">
+    {/* base grid layer (visible normally) */}
     <div
       aria-hidden
-      className="absolute inset-0 bg-[linear-gradient(to_right,var(--color-border)_1px,transparent_1px),linear-gradient(to_bottom,var(--color-border)_1px,transparent_1px)] bg-[size:24px_24px] dark:opacity-50"
+      className="absolute inset-0 bg-[linear-gradient(to_right,var(--color-border)_1px,transparent_1px),linear-gradient(to_bottom,var(--color-border)_1px,transparent_1px)] bg-[size:24px_24px] transition-opacity duration-300 opacity-100 pointer-events-none motion-reduce:transition-none"
     />
 
-    <div className="bg-background absolute inset-0 m-auto flex size-12 items-center justify-center border-l border-t">
+    {/* hover grid layer (fades in on group hover) */}
+    <div
+      aria-hidden
+      className="absolute inset-0 bg-[linear-gradient(to_right,var(--color-border-hover)_1px,transparent_1px),linear-gradient(to_bottom,var(--color-border-hover)_1px,transparent_1px)] bg-[size:24px_24px] transition-opacity duration-300 opacity-0 pointer-events-none group-hover:opacity-100 motion-reduce:transition-none"
+    />
+
+    <div className="bg-background absolute inset-0 m-auto flex size-12 items-center justify-center border-l border-t text-primary group-hover:text-primary/90 border-primary/50">
       {children}
     </div>
   </div>
 );
+
+type BenefitItemProps = {
+  data: (typeof benefits)[number];
+};
+
+function BenefitItem({ data }: BenefitItemProps) {
+  return (
+    <Card className="max-w-[16rem] lg:max-w-none group border-0 shadow-none gap-y-2 dark:bg-transparent">
+      <CardHeader>
+        <CardDecorator>{data.renderIcon("")}</CardDecorator>
+
+        <h3 className="mt-4 font-medium">{data.title}</h3>
+      </CardHeader>
+
+      <CardContent className="px-2">
+        <p className="text-xs text-muted-foreground xl:text-sm">
+          {data.description}
+        </p>
+      </CardContent>
+    </Card>
+  );
+}

@@ -28,15 +28,15 @@ const FaqSection = () => {
           type="single"
           collapsible
           defaultValue="question-0"
-          className="w-full grow space-y-6"
+          className="w-full grow space-y-6 lg:min-w-[55%]"
         >
           {faq.map(({ question, answer }, index) => (
             <AccordionItem
               key={question}
               value={`question-${index}`}
-              className="border-b-zinc-300 border-dotted"
+              className="last:border-b-2 border-2 border-zinc-600 px-4 py-1 rounded-2xl"
             >
-              <AccordionTrigger className="text-md text-left text-foreground lg:text-lg pb-3 transition-colors hover:text-primary">
+              <AccordionTrigger className="font-semibold lg:text-base text-left text-foreground pb-4 transition-colors hover:text-primary">
                 {question}
               </AccordionTrigger>
               <AccordionContent className="text-base text-muted-foreground">

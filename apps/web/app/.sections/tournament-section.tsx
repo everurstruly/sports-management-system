@@ -10,10 +10,40 @@ import {
   Sparkles,
   Zap,
 } from "lucide-react";
-import Image from "next/image";
-import PageSection from "../../components/page-section";
-import SectionHeading from "../../components/section-heading";
-import SectionSubheading from "../../components/section-subheading";
+import PageSection from "@/components/page-section";
+import SectionHeading from "@/components/section-heading";
+import SectionSubheading from "@/components/section-subheading";
+
+const benefits = [
+  {
+    name: "Onboarding",
+    description:
+      "Get teams signed up, verified and ready to compete without the hassle.",
+    renderIcon: (className: string) => <PenBoxIcon className={className} />,
+  },
+  {
+    name: "Financing",
+    description:
+      "Collect fees, fund your team, and pay out prizes without the headache.",
+    renderIcon: (className: string) => (
+      <CircleDollarSignIcon className={className} />
+    ),
+  },
+  {
+    name: "Organizing",
+    description:
+      "Build your brackets, post scores, and keep the whole tournament on schedule.",
+    renderIcon: (className: string) => (
+      <DraftingCompass className={className} />
+    ),
+  },
+  {
+    name: "Participating",
+    description:
+      "Never miss an update. Get alerts, see stats, and chat as a fan or player.",
+    renderIcon: (className: string) => <Activity className={className} />,
+  },
+] as const;
 
 export default function TournamentSection() {
   return (

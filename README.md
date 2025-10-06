@@ -1,4 +1,4 @@
-# Sports Management System 
+# Tournament Management Soution 
 
 Independent yet connected apps for **tournament scheduling, communication, and mobilization**.  
 A modern, mobile-first platform designed for organizers, teams, and fans.

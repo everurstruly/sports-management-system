@@ -6,7 +6,7 @@ import SectionHeading from "@/components/section-heading";
 
 export default function PricingSection() {
   return (
-    <PageSection className="py-18 lg:pb-20">
+    <PageSection className="relative py-18 lg:pb-20">
       <header className="mx-auto max-w-2xl text-center mb-8 md:mb-20">
         <SectionHeading className="mx-auto">
           Simple, Transparent Pricing
@@ -84,6 +84,8 @@ export default function PricingSection() {
           </div>
         </div>
       </div>
+
+      <div className="absolute inset-0 -z-1 bg-[repeating-linear-gradient(105deg,#eee_0px_1px,transparent_1px_8px)] dark:bg-[repeating-linear-gradient(105deg,#222_0px_1px,transparent_1px_8px)] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#555_70%,transparent_110%)]"></div>
     </PageSection>
   );
 }

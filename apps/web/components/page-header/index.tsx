@@ -88,10 +88,10 @@ export const PageHeader = React.forwardRef<HTMLElement, PageHeaderProps>(
     {
       className,
       logo = <Logo />,
-      logoHref = "#",
+      logoHref = "/",
       navigationLinks = defaultNavigationLinks,
       signInText = "Sign In",
-      signInHref = "#signin",
+      signInHref = "/waitlist",
       ctaText = "Login",
       ctaHref = "/waitlist",
       onSignInClick,
@@ -207,14 +207,8 @@ export const PageHeader = React.forwardRef<HTMLElement, PageHeaderProps>(
               {signInText}
             </Button> */}
 
-            <Button
-              size="sm"
-              onClick={(e) => {
-                e.preventDefault();
-                if (onCtaClick) onCtaClick();
-              }}
-            >
-              {ctaText}
+            <Button asChild>
+              <Link href={signInHref}>{ctaText}</Link>
             </Button>
           </div>
         </Container>

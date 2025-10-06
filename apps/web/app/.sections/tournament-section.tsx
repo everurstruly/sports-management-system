@@ -2,11 +2,14 @@ import {
   Activity,
   CircleDollarSignIcon,
   DraftingCompass,
+  MoveRightIcon,
   PenBoxIcon,
 } from "lucide-react";
 import PageSection from "@/components/page-section";
 import SectionHeading from "@/components/section-heading";
 import SectionSubheading from "@/components/section-subheading";
+import { Button } from "@workspace/ui/components/button";
+import Link from "next/link";
 
 const benefits = [
   {
@@ -55,12 +58,12 @@ export default function TournamentSection() {
         </SectionSubheading>
       </div>
 
-      <div className="flex flex-col min-[300px]:flex-row lg:*:flex-row justify-evenly gap-x-5 gap-10 *:gap-y-10 sm:*:gap-y-16 lg:gap-x-6 lg:*:gap-x-6 lg:justify-between lg:*:justify-between max-w-xl mx-auto *:max-w-[26ch] lg:max-w-none lg:*:max-w-none">
-        <div className="flex flex-col">
+      <div className="flex flex-col min-[300px]:flex-row lg:*:flex-row justify-evenly gap-x-5 gap-10 *:gap-y-10 sm:*:gap-y-16 lg:gap-x-5 lg:*:gap-x-5 lg:justify-between max-w-xl mx-auto *:max-w-[26ch] lg:max-w-none lg:*:max-w-none">
+        <div className="flex flex-col justify-between">
           <BenefitItem data={benefits[0]!} />
           <BenefitItem data={benefits[1]!} />
         </div>
-        <div className="flex flex-col">
+        <div className="flex flex-col justify-between">
           <BenefitItem data={benefits[2]!} />
           <BenefitItem data={benefits[3]!} />
         </div>
@@ -75,15 +78,24 @@ type BenefitItemProps = {
 
 function BenefitItem({ data }: BenefitItemProps) {
   return (
-    // as a card maybe with picture
-    <div className="space-y-2.5">
-      <div className="flex items-center gap-2">
-        {data.renderIcon("size-4 shrink-0")}
-        <h3 className="text-sm lg:text-lg font-semibold">{data.name}</h3>
-      </div>
-      <p className="leading-tight text-balance text-foreground text-xs">
-        {data.description}
-      </p>
+    // TODO: as a card maybe with picture
+    <div>
+      <Button
+        variant="ghost"
+        asChild
+        className="space-y-2.5 h-full w-full block text-start grow p-3"
+      >
+        <Link href="/waitlist">
+          <div className="flex items-center gap-3">
+            {data.renderIcon("size-5 shrink-0 leading-none")}
+            <h3 className="text-sm lg:text-lg font-semibold">{data.name}</h3>
+          </div>
+
+          <p className="leading-tight text-balance text-xs">
+            {data.description} <MoveRightIcon className="ms-2 inline-block" />
+          </p>
+        </Link>
+      </Button>
     </div>
   );
 }

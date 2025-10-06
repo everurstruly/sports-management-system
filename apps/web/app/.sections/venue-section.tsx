@@ -4,6 +4,29 @@ import { ReactNode } from "react";
 import PageSection from "../../components/page-section";
 import SectionHeading from "../../components/section-heading";
 import SectionSubheading from "../../components/section-subheading";
+import { Button } from "@workspace/ui/components/button";
+import Link from "next/link";
+
+const benefits = [
+  {
+    title: "Master Calendar View",
+    description:
+      "See all activities at once. Never double-book your venue for tournaments and maintenance.",
+    renderIcon: (className: string) => <CalendarCheck className={className} />,
+  },
+  {
+    title: "Smart Availability",
+    description:
+      "Automatically share open slots. Let your community see when they can use vacant spaces.",
+    renderIcon: (className: string) => <ScanEyeIcon className={className} />,
+  },
+  {
+    title: "Showcase Professionalism",
+    description:
+      "Showcase your venue with a clean, modern schedule. Attract better tournaments and members.",
+    renderIcon: (className: string) => <AwardIcon className={className} />,
+  },
+] as const;
 
 export default function VenueSection() {
   return (

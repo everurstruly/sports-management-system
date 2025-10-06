@@ -58,7 +58,7 @@ export default function TournamentSection() {
         </SectionSubheading>
       </div>
 
-      <div className="flex flex-col min-[300px]:flex-row lg:*:flex-row justify-evenly gap-x-5 gap-10 *:gap-y-10 sm:*:gap-y-16 lg:gap-x-5 lg:*:gap-x-5 lg:justify-between max-w-xl mx-auto *:max-w-[26ch] lg:max-w-none lg:*:max-w-none">
+      <div className="flex flex-col min-[380px]:flex-row lg:*:flex-row justify-evenly gap-x-5 gap-10 *:gap-y-10 sm:*:gap-y-16 lg:gap-x-5 lg:*:gap-x-5 lg:justify-between max-w-xl mx-auto min-[380px]*:max-w-[26ch] lg:max-w-none lg:*:max-w-none">
         <div className="flex flex-col justify-between">
           <BenefitItem data={benefits[0]!} />
           <BenefitItem data={benefits[1]!} />
@@ -86,12 +86,12 @@ function BenefitItem({ data }: BenefitItemProps) {
         className="space-y-2.5 h-full w-full block text-start grow p-3"
       >
         <Link href="/waitlist">
-          <div className="flex items-center gap-3">
+          <div className="flex flex-col min-[380px]:flex-row min-[380px]:items-center gap-3">
             {data.renderIcon("size-5 shrink-0 leading-none")}
-            <h3 className="text-sm lg:text-lg font-semibold">{data.name}</h3>
+            <h3 className="text-base lg:text-lg font-semibold">{data.name}</h3>
           </div>
 
-          <p className="leading-tight text-balance text-xs">
+          <p className="leading-tight text-wrap text-xs">
             {data.description} <MoveRightIcon className="ms-2 inline-block" />
           </p>
         </Link>

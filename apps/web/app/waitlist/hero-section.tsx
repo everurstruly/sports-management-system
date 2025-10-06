@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { BackgroundLines } from "@workspace/ui/components/ui/background-lines";
 import {
@@ -5,45 +6,26 @@ import {
   AvatarFallback,
   AvatarImage,
 } from "@workspace/ui/components/avatar";
-import { Button } from "@workspace/ui/components/button";
-import { Input } from "@workspace/ui/components/input";
 import PageSection from "@/components/page-section";
 import PageHeading from "@/components/page-heading";
 import PageSubheading from "@/components/page-subheading";
+import WaitlistForm from "./form";
 
 export default function WaitlistSection() {
   return (
-    <PageSection className="flex items-center justify-center h-full overflow-hidden py-18 lg:pb-20">
+    <PageSection className="relative flex items-center justify-center h-full overflow-hidden py-18 lg:pb-20">
       <BackgroundLines className="container flex flex-col items-center justify-center w-full px-4 md:h-full">
-        <PageHeading>Join the Waitlist</PageHeading>
-
+        <PageHeading className="mx-auto text-center">
+          Join the Waitlist
+        </PageHeading>
         <PageSubheading className="mx-auto text-center">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Be the first to know when we launch. Sign up now to secure your spot!
         </PageSubheading>
 
-        <div className="relative z-20 flex items-center w-full max-w-md gap-3 p-1 mt-10">
-          <Input type="email" placeholder="Enter your email" />
-          <Button variant="default">Join now</Button>
-        </div>
-
-        <div className="flex items-center gap-2 mt-10">
-          <span className="inline-flex items-center -space-x-2.5">
-            {Array.from({ length: 3 }).map((_, index) => (
-              <Avatar key={index} className="size-8">
-                <AvatarImage
-                  src={"https://avatars.githubusercontent.com/u/93017833?v=4"}
-                  alt="placeholder"
-                />
-                <AvatarFallback>{index}</AvatarFallback>
-              </Avatar>
-            ))}
-          </span>
-          <p className="font-medium tracking-tight text-muted-foreground/80">
-            +50 people already joined
-          </p>
-        </div>
+        <WaitlistForm className="relative z-20 flex items-start w-full max-w-md gap-3 p-1 mt-10" />
       </BackgroundLines>
+
+      <div className="absolute inset-0 -z-1 bg-[repeating-linear-gradient(105deg,#eee_0px_1px,transparent_1px_8px)] dark:bg-[repeating-linear-gradient(105deg,#222_0px_1px,transparent_1px_8px)] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#555_70%,transparent_110%)]"></div>
     </PageSection>
   );
 }

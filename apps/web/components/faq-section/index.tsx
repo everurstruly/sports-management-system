@@ -36,7 +36,7 @@ const FaqSection = () => {
               value={`question-${index}`}
               className="last:border-b-2 border-2 border-zinc-600 px-4 py-1 rounded-2xl"
             >
-              <AccordionTrigger className="font-semibold lg:text-base text-left text-foreground pb-4 transition-colors hover:text-primary">
+              <AccordionTrigger className="font-semibold text-base text-left text-foreground pb-4 transition-colors hover:text-primary">
                 {question}
               </AccordionTrigger>
               <AccordionContent className="text-base text-muted-foreground">

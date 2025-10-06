@@ -14,6 +14,9 @@ importers:
       '@workspace/typescript-config':
         specifier: workspace:*
         version: link:packages/typescript-config
+      '@workspace/waitlist-security':
+        specifier: workspace:*
+        version: link:packages/waitlist-security
       prettier:
         specifier: ^3.6.2
         version: 3.6.2

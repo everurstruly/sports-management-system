@@ -4,7 +4,10 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./*"],
-      "@workspace/ui/*": ["../../packages/ui/src/*"]
+      "@workspace/ui/*": ["../../packages/ui/src/*"],
+      "@workspace/waitlist-security/*": [
+        "../../packages/waitlist-security/src/*"
+      ]
     },
     "plugins": [
       {

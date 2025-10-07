@@ -25,12 +25,13 @@ export default function HeroSection() {
       <div className="dark:[--color-border:color-mix(in_oklab,var(--color-white)_10%,transparent)] text-center">
         <PageHeading>Inclusive Tournaments, Effortlessly Managed</PageHeading>
         <PageSubheading className="mx-auto">
-          Spend more time competing and less time in the office!
+          Spend more time playing and less time on paperwork! The one place to
+          collect fees, build brackets, and rally support.
         </PageSubheading>
 
         <div className="mt-8">
           <Button size="lg" variant="default">
-            <Link href="/waitlist">Get Started</Link>
+            <Link href="/waitlist">Sign Up Now</Link>
           </Button>
         </div>
 

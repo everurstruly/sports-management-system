@@ -61,10 +61,12 @@ export const metadata: Metadata = {
     apple: "/apple-touch-icon.png",
   },
   openGraph: {
+    type: "website",
     title,
+    siteName: "Renna",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "https://renna.netlify.app/og-image.jpg",
         width: 1200,
         height: 630,
         alt: title,
@@ -74,7 +76,7 @@ export const metadata: Metadata = {
   twitter: {
     title,
     card: "summary_large_image",
-    images: ["/og-image.jpg"],
+    images: ["https://everurstruly.netlify.app/og-image.jpg"],
     creator: "@everurstruly",
   },
 };

@@ -1,0 +1,6 @@
+[build]
+  publish = "apps/web/.next"
+  command = "node ./scripts/generate-sitemap.js && pnpm --filter web run build"
+
+[context.production.environment]
+  NODE_VERSION = "20"

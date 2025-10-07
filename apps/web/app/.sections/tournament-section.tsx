@@ -50,7 +50,7 @@ export default function TournamentSection() {
 
       <div className="text-center mb-20">
         <SectionHeading className="mx-auto">
-          Host Tournament Fast. Join Even Faster
+          Host Competitions Fast. Join Even Faster
         </SectionHeading>
         <SectionSubheading className="mx-auto">
           Go from sign-ups to champions in record time with organizers, players

@@ -96,7 +96,7 @@ function BenefitItem({ data }: BenefitItemProps) {
       <CardHeader>
         <CardDecorator>{data.renderIcon("")}</CardDecorator>
 
-        <h3 className="mt-4 font-medium">{data.title}</h3>
+        <h3 className="text-lg mt-4 font-semibold">{data.title}</h3>
       </CardHeader>
 
       <CardContent className="px-2">

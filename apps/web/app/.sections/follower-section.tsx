@@ -14,7 +14,7 @@ export default function FollowerSection() {
     <PageSection>
       <header className="mb-10 text-center">
         <SectionHeading className="mx-auto">
-          Follow Games & Support Teams.
+          Follow Matches & Support Teams.
         </SectionHeading>
       </header>
 

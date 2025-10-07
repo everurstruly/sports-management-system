@@ -10,11 +10,10 @@ export default function TeamSection() {
     <PageSection>
       <header className="text-center">
         <SectionHeading className="mx-auto">
-          Team Communication and Funding
+          Team Funding & Communication
         </SectionHeading>
         <SectionSubheading className="mt-4 mx-auto">
-          Libero sapiente aliquam quibusdam aspernatur, praesentium iusto
-          repellendus.
+          Empower your team with seamless funding and communication tools.
         </SectionSubheading>
       </header>
 

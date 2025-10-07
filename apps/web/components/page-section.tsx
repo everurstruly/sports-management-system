@@ -12,7 +12,7 @@ export default function PageSection({
   containerClassName = "",
 }: PageSectionProps) {
   return (
-    <section className={`py-16 sm:py-20 xl:py-24 ${className}`}>
+    <section className={`py-16 sm:py-20 ${className}`}>
       <Container className={containerClassName}>{children}</Container>
     </section>
   );

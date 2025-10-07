@@ -25,7 +25,7 @@ export default function TeamSection() {
             </CardDecorator>
 
             <h3 className="text-sm lg:text-lg font-semibold mt-4">
-              Customizable
+              Savings & Contributions
             </h3>
           </CardHeader>
 
@@ -44,7 +44,7 @@ export default function TeamSection() {
             </CardDecorator>
 
             <h3 className="text-sm lg:text-lg font-semibold mt-4">
-              You have full control
+              Track Profiles & Stats
             </h3>
           </CardHeader>
 
@@ -62,7 +62,7 @@ export default function TeamSection() {
             </CardDecorator>
 
             <h3 className="text-sm lg:text-lg font-semibold mt-4">
-              Powered By AI
+              Strategize in chat
             </h3>
           </CardHeader>
 

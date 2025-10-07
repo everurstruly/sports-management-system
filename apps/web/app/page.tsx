@@ -14,8 +14,8 @@ export default function Home() {
       <HeroSection />
       <TournamentSection />
       <VenueSection />
-      <FollowerSection />
       <TeamSection />
+      <FollowerSection />
       <FaqSection />
     </main>
   );

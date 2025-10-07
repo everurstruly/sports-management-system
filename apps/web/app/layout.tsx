@@ -74,7 +74,7 @@ export const metadata: Metadata = {
   twitter: {
     title,
     card: "summary_large_image",
-    images: ["/og-image.png"],
+    images: ["/og-image.jpg"],
     creator: "@everurstruly",
   },
 };

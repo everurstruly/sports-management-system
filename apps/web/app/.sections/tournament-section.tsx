@@ -22,7 +22,7 @@ const benefits = [
   {
     name: "Financing",
     description:
-      "Collect fees, fund your team, and pay out prizes without the headache.",
+      "Collect entry fees, and pay out prizes without the headache.",
     renderIcon: (className: string) => (
       <CircleDollarSignIcon className={className} />
     ),
@@ -38,7 +38,7 @@ const benefits = [
   {
     name: "Participating",
     description:
-      "Never miss an update. Get alerts, see stats, and chat as a fan or player.",
+      "Never miss an update. Get alerts, compare stats, and chat as a fan or player.",
     renderIcon: (className: string) => <ZapIcon className={className} />,
   },
 ] as const;
@@ -46,7 +46,7 @@ const benefits = [
 export default function TournamentSection() {
   return (
     <PageSection>
-      {/* page section preceeding fancy hero required more whitespace top */}
+      {/* note: page section preceeding fancy hero required more whitespace top */}
       <div className="py-6 xl:py-8"></div>
 
       <div className="text-center mb-20">
@@ -59,7 +59,7 @@ export default function TournamentSection() {
         </SectionSubheading>
       </div>
 
-      <div className="flex flex-col min-[480px]:flex-row lg:*:flex-row__ justify-evenly gap-14 *:gap-y-14 sm:*:gap-y-16 gap-x-5 sm:gap-x-14 sm:*:gap-x-14 lg:justify-between__ max-w-2xl lg:max-w-3xl mx-auto min-[480px]:*:max-w-[36ch] lg:*:max-w-none">
+      <div className="flex flex-col min-[480px]:flex-row lg:*:flex-row justify-evenly gap-14 *:gap-y-14 sm:*:gap-y-16 gap-x-14 lg:gap-x-2 lg:*:gap-x-2 lg:justify-between max-w-2xl mx-auto min-[480px]:*:max-w-[36ch] lg:max-w-3xl__ lg:max-w-none lg:*:max-w-none">
         <div className="flex flex-col justify-between">
           <BenefitItem data={benefits[0]!} />
           <BenefitItem data={benefits[1]!} />
@@ -82,17 +82,17 @@ function BenefitItem({ data }: BenefitItemProps) {
     // TODO: as a card maybe with picture
     <div>
       <Button
-        variant="outline"
+        variant="ghost"
         asChild
-        className="space-y-1 lg:space-y-2.5 min-h-[120px] h-full w-full block grow p-3 sm:p-5"
+        className="space-y-1 lg:space-y-2.5 min-h-[120px] h-full w-full block grow p-3 sm:p-4"
       >
         <Link href="/waitlist">
-          <div className="flex flex-col min-[480px]:flex-row min-[480px]:items-center gap-2">
+          <div className="flex flex-col min-[480px]:flex-row__ min-[480px]:items-center__ gap-2">
             {data.renderIcon("size-6 shrink-0 leading-none text-primary")}
-            <h3 className="text-xl font-semibold">{data.name}</h3>
+            <h3 className="text-lg font-semibold">{data.name}</h3>
           </div>
 
-          <p className="lg:leading-tight text-wrap text-sm text-muted-foreground">
+          <p className="lg:leading-tight text-wrap text-sm font-normal">
             {data.description} <MoveRightIcon className="inline-block" />
           </p>
         </Link>

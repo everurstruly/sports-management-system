@@ -6,23 +6,19 @@ import Link from "next/link";
 const links = [
   {
     title: "About",
-    href: "#",
-  },
-  {
-    title: "Features",
-    href: "#",
+    href: "/",
   },
   {
     title: "Pricing",
-    href: "#",
+    href: "/pricing",
   },
   {
-    title: "Customers",
-    href: "#",
+    title: "Faq",
+    href: "#faq",
   },
   {
-    title: "Contact",
-    href: "#",
+    title: "Help",
+    href: "https://everurstruly.netlify.app",
   },
 ];
 

@@ -19,7 +19,7 @@ export default function HeroSection() {
   const [activeItem, setActiveItem] = useState<ImageKey>("item-1");
 
   return (
-    <PageSection className="relative py-18 lg:pb-20">
+    <PageSection id="hero" className="relative py-18 lg:pb-20">
       <div className="bg-linear-to-b absolute inset-0 -z-10 max-w-6xl mx-auto sm:rounded-b-4xl dark:block dark:to-[color-mix(in_oklab,var(--color-zinc-900)_100%,var(--background))] to-[color-mix(in_oklab,var(--color-neutral-200)_70%,var(--background))]"></div>
 
       <div className="dark:[--color-border:color-mix(in_oklab,var(--color-white)_10%,transparent)] text-center">

@@ -7,7 +7,7 @@ import SectionSubheading from "../../components/section-subheading";
 
 export default function TeamSection() {
   return (
-    <PageSection>
+    <PageSection id="team">
       <header className="text-center">
         <SectionHeading className="mx-auto">
           Team Funding and Communication

@@ -30,7 +30,7 @@ const benefits = [
 
 export default function VenueSection() {
   return (
-    <PageSection>
+    <PageSection id="venue">
       <header className="md:flex md:items-end md:justify-between md:gap-x-14 text-center md:text-start">
         <SectionHeading className="shrink-0 md:max-w-[40%] lg:grow-0 md:mb-0 mx-auto md:mx-0">
           Venue & Calendar Management.

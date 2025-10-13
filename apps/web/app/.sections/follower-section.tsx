@@ -11,7 +11,7 @@ import SectionHeading from "../../components/section-heading";
 
 export default function FollowerSection() {
   return (
-    <PageSection>
+    <PageSection id="follower">
       <header className="mb-10 text-center">
         <SectionHeading className="mx-auto">
           Follow Matches & Support Teams.

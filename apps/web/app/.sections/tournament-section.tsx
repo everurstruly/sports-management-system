@@ -45,7 +45,7 @@ const benefits = [
 
 export default function TournamentSection() {
   return (
-    <PageSection>
+    <PageSection id="tournament">
       {/* note: page section preceeding fancy hero required more whitespace top */}
       <div className="py-6 xl:py-8"></div>
 

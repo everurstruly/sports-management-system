@@ -12,7 +12,7 @@ import SectionHeading from "../section-heading";
 
 const FaqSection = () => {
   return (
-    <PageSection>
+    <PageSection id="faq">
       <div className="flex flex-col md:items-center lg:items-start lg:justify-between lg:flex-row gap-x-6 gap-y-16">
         <header className="w-full flex flex-col items-center lg:items-start lg:text-start text-center lg:gap-y-6">
           <SectionHeading className="md:mx-auto text-balance lg:max-w-xs lg:mx-0">

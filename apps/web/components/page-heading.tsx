@@ -1,3 +1,4 @@
+"use client";
 import { TextAnimate } from "@workspace/ui/components/text-animate";
 
 type PageTitleProps = {
@@ -7,7 +8,7 @@ type PageTitleProps = {
 
 export default function PageHeading({ children, className }: PageTitleProps) {
   return (
-    <TextAnimate
+    <TextAnimate 
       animation="slideUp"
       delay={-5}
       by="line"

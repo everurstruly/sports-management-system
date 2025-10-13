@@ -1,7 +1,4 @@
 "use client";
-
-import * as React from "react";
-import { useEffect, useState, useRef } from "react";
 import { Button } from "@workspace/ui/components/button";
 import { AnimatedThemeToggler } from "@workspace/ui/components/animated-theme-toggler";
 import {
@@ -22,6 +19,7 @@ import { config } from "@/app/config";
 import DesktopNavbarMenu from "./menu";
 import Container from "../container";
 import Link from "next/link";
+import React from "react";
 
 // Hamburger icon component
 const HamburgerIcon = ({
@@ -100,45 +98,8 @@ export const PageHeader = React.forwardRef<HTMLElement, PageHeaderProps>(
     },
     ref
   ) => {
-    const [isMobile, setIsMobile] = useState(false);
-    const containerRef = useRef<HTMLElement>(null);
-
-    useEffect(() => {
-      const checkWidth = () => {
-        if (containerRef.current) {
-          const width = containerRef.current.offsetWidth;
-          setIsMobile(width < 768); // 768px is md breakpoint
-        }
-      };
-
-      checkWidth();
-
-      const resizeObserver = new ResizeObserver(checkWidth);
-      if (containerRef.current) {
-        resizeObserver.observe(containerRef.current);
-      }
-
-      return () => {
-        resizeObserver.disconnect();
-      };
-    }, []);
-
-    // Combine refs
-    const combinedRef = React.useCallback(
-      (node: HTMLElement | null) => {
-        containerRef.current = node;
-        if (typeof ref === "function") {
-          ref(node);
-        } else if (ref) {
-          ref.current = node;
-        }
-      },
-      [ref]
-    );
-
     return (
       <header
-        ref={combinedRef}
         className={cn(
           "sticky top-0 z-50 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 [&_*]:no-underline px-0",
           className
@@ -146,7 +107,7 @@ export const PageHeader = React.forwardRef<HTMLElement, PageHeaderProps>(
         {...props}
       >
         <Container className="flex items-end h-16 pb-4 xl:h-18 gap-x-6">
-          {isMobile && (
+          <div className="md:hidden md:pointer-events-none">
             <Popover>
               <PopoverTrigger asChild>
                 <Button variant="outline" size="sm">
@@ -173,7 +134,7 @@ export const PageHeader = React.forwardRef<HTMLElement, PageHeaderProps>(
                 </NavigationMenu>
               </PopoverContent>
             </Popover>
-          )}
+          </div>
 
           <nav className="flex items-center gap-x-12 mr-auto">
             <Link
@@ -186,7 +147,7 @@ export const PageHeader = React.forwardRef<HTMLElement, PageHeaderProps>(
               </span>
             </Link>
 
-            {!isMobile && <DesktopNavbarMenu />}
+            <DesktopNavbarMenu />
           </nav>
 
           {/* quick actions menu */}

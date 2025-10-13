@@ -224,7 +224,7 @@ export default function DesktopNavbarMenu() {
     React.useState<UserRole | null>(null);
 
   return (
-    <NavigationMenu viewport={false}>
+    <NavigationMenu viewport={false} className="hidden lg:flex">
       <NavigationMenuList>
         <NavigationMenuItem>
           <SubMenuTrigger>Features</SubMenuTrigger>

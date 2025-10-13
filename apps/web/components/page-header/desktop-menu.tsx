@@ -84,12 +84,13 @@ const sports = [
   },
 ] as const;
 
-const userTypes = [
+export const userTypes = [
   {
     title: "Tournament Organizers",
     role: "organizer",
     // href: "/register/?role=coach",
     href: "#",
+    sectionHref: "#tournament",
     description: "Create and manage team communications, plans",
   },
   {
@@ -97,13 +98,15 @@ const userTypes = [
     role: "club",
     // href: "/register/?role=coach",
     href: "#",
+    sectionHref: "#venue",
     description: "Create and manage team communications, plans",
   },
   {
-    title: "Coaches & Atheletes",
+    title: "Coaches & Athletes",
     role: "team",
     // href: "/register/?role=coach",
     href: "#",
+    sectionHref: "#team",
     description: "Create and manage team communications, plans",
   },
   {
@@ -111,6 +114,7 @@ const userTypes = [
     role: "player",
     // href: "/register/?role=coach",
     href: "#",
+    sectionHref: "#tournament",
     description: "Create and manage team communications, plans",
   },
   {
@@ -118,6 +122,7 @@ const userTypes = [
     role: "staff",
     // href: "/register/?role=coach",
     href: "#",
+    sectionHref: "#follower",
     description: "Create and manage team communications, plans",
   },
   {
@@ -125,13 +130,14 @@ const userTypes = [
     role: "fan",
     // href: "/register/?role=coach",
     href: "#",
+    sectionHref: "#team",
     description: "Create and manage team communications, plans",
   },
 ] as const;
 
 type UserRole = (typeof userTypes)[number]["role"];
 
-const appFeatures = [
+export const appFeatures = [
   {
     Icon: BookMarkedIcon,
     title: "Invoicing",
@@ -219,6 +225,7 @@ const appFeatures = [
     description: "Manage your team and its members effectively.",
   },
 ];
+
 export default function DesktopNavbarMenu() {
   const [hoveredOverUserType, setHoveredOverUserType] =
     React.useState<UserRole | null>(null);

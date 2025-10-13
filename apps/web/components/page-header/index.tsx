@@ -16,10 +16,12 @@ import { cn } from "@/lib/utils";
 import type { ComponentProps } from "react";
 import { Logo } from "@/components/logo";
 import { config } from "@/app/config";
-import DesktopNavbarMenu from "./menu";
+import DesktopNavbarMenu from "./desktop-menu";
+import MobileNavbarMenu from "./mobile-menu";
 import Container from "../container";
 import Link from "next/link";
 import React from "react";
+import QuickActions from "./quick-actions";
 
 // Hamburger icon component
 const HamburgerIcon = ({
@@ -107,34 +109,7 @@ export const PageHeader = React.forwardRef<HTMLElement, PageHeaderProps>(
         {...props}
       >
         <Container className="flex items-end h-16 pb-4 xl:h-18 gap-x-6">
-          <div className="md:hidden md:pointer-events-none">
-            <Popover>
-              <PopoverTrigger asChild>
-                <Button variant="outline" size="sm">
-                  <HamburgerIcon />
-                </Button>
-              </PopoverTrigger>
-              <PopoverContent align="start" className="w-64.. p-1">
-                <NavigationMenu className="max-w-none">
-                  <NavigationMenuList className="flex-col items-start gap-0">
-                    {navigationLinks.map((link, index) => (
-                      <NavigationMenuItem key={index} className="w-full">
-                        <button
-                          onClick={(e) => e.preventDefault()}
-                          className={cn(
-                            "flex w-full items-center rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground cursor-pointer no-underline bg-transparent",
-                            link.active && "bg-accent text-accent-foreground"
-                          )}
-                        >
-                          {link.label}
-                        </button>
-                      </NavigationMenuItem>
-                    ))}
-                  </NavigationMenuList>
-                </NavigationMenu>
-              </PopoverContent>
-            </Popover>
-          </div>
+          <MobileNavbarMenu />
 
           <nav className="flex items-center gap-x-12 mr-auto">
             <Link
@@ -150,28 +125,7 @@ export const PageHeader = React.forwardRef<HTMLElement, PageHeaderProps>(
             <DesktopNavbarMenu />
           </nav>
 
-          {/* quick actions menu */}
-          <div className="flex items-center gap-3">
-            <AnimatedThemeToggler
-              iconClassName="text-xs size-4.5"
-              className="px-4"
-            />
-
-            {/* <Button
-              variant="ghost"
-              size="sm"
-              onClick={(e) => {
-                e.preventDefault();
-                if (onSignInClick) onSignInClick();
-              }}
-            >
-              {signInText}
-            </Button> */}
-
-            <Button asChild>
-              <Link href={signInHref}>{ctaText}</Link>
-            </Button>
-          </div>
+          <QuickActions signInText={ctaText} signInHref={ctaHref} />
         </Container>
       </header>
     );
